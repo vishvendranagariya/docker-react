@@ -1,0 +1,26 @@
+Complete!
+
+## Downloading release setup RPM...
+
++ mktemp
++ curl -sL -o '/tmp/tmp.1IeXlvkkO1' 'https://rpm.nodesource.com/pub_13.x/el/8/x86_64/nodesource-release-el8-1.noarch.rpm'
+
+## Installing release setup RPM...
+
++ rpm -i --nosignature --force '/tmp/tmp.1IeXlvkkO1'
+
+## Cleaning up...
+
++ rm -f '/tmp/tmp.1IeXlvkkO1'
+
+## Checking for existing installations...
+
++ rpm -qa 'node|npm' | grep -v nodesource
+
+## Run `sudo yum install -y nodejs` to install Node.js 13.x and npm.
+## You may also need development tools to build native addons:
+     sudo yum install gcc-c++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+     sudo yum install yarn
+
